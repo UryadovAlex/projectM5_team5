@@ -1,0 +1,30 @@
+.searchContainer {
+    position: relative;
+  }
+  
+  .searchBar {
+    width: 360px;
+    height: 60px;
+    background: #F3F3F3;
+    border-radius: 94px;
+    border: none;
+    text-align: center;
+    color: #833AE0;
+    font-size: 35px;
+    line-height: 24px;
+    outline-style: inherit;
+    margin-bottom: 47px;
+  }
+  
+  .searchBar::placeholder {
+    font-size: 25px;
+    line-height: 24px;
+    color: #BDBDBD;
+    transform: translateY(-4px);
+  }
+  
+  .icon {
+    position: absolute;
+    top: 20px;
+    left: 19px;
+  }
