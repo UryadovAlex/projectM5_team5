@@ -1,0 +1,61 @@
+table {
+    border-collapse: collapse;
+}
+
+.row {
+    font-family: 'Roboto', sans-serif;
+    width: 759px;
+    height: 84px;
+}
+
+.row:hover {
+    background: rgba(131, 58, 224, 0.05);
+}
+
+.row td {
+    border-bottom: 1px black;
+}
+
+.row .symbol {
+    font-family: Space Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 10px;
+    width: 69px;
+    text-align: center;
+}
+
+.row .name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 18px;
+    width: 170px;
+}
+
+.row .name .transparent {
+    opacity: .5;
+}
+
+.row .price {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 18px;
+    width: 190px;
+    text-align: center;
+}
+
+.row .price .decimal {
+    font-size: 16px;
+}
+
+.row .change {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 10px;
+    width: 270px;
+    text-align: center;
+}
