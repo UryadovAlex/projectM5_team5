@@ -1,3 +1,9 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 .wrapper {
     height: 67px;
     background: #833AE0;
@@ -11,6 +17,7 @@
     font-style: normal;
     color: #FFDC40;
     position: relative;
+
 }
 
 .amount {
