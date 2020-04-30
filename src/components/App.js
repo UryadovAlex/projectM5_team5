@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
 
@@ -20,3 +21,15 @@ export default class App extends Component {
         )
     }
 }
+=======
+import React from 'react';
+import StockList from './content/stock/stock-list/StockList';
+
+class App extends React.Component {
+  render() {
+    return <StockList />
+  }
+}
+
+export default App;
+>>>>>>> Ahmad
