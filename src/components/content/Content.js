@@ -6,9 +6,11 @@ import styles from './Content.module.css';
 
 class Content extends React.Component {
     render() {
+        const { userStock } = this.props;
+
         return (
             <div className = { styles.wrapper }>
-                <Route exact path='/account' render={() => <Account />} />
+                <Route exact path='/account' render={() => <Account userStock={userStock}/>} />
                 {/* <Route path='/stock' render={() => <Stock />} />
                 <Route path='/buy' render={() => <Buy />} /> */}
             </div>
