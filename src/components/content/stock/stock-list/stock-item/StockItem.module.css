@@ -1,38 +1,8 @@
-.stockContainer {
-  width: 759px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  min-width: 475px;
-}
-
-.item:hover {
-  background: rgba(131, 58, 224, 0.05);
-  cursor: pointer;
-}
-
-p {
-  margin: 0;
-  padding: 20px 0;
-}
-
 .ticker {
   margin-right: 30px;
   font-size: 12px;
   line-height: 10px;
   color: rgba(0, 0, 0, 0.5);
-}
-
-.item div {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
 }
 
 .company {
@@ -48,5 +18,14 @@ p {
 .priceDecimal {
   font-size: 20px;
   line-height: 18px;
+}
+
+.row {
+  width: 100%;
+}
+
+.row:hover {
+  background: rgba(131, 58, 224, 0.05);
+  cursor: pointer;
 }
 

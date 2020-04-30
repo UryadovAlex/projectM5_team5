@@ -14,6 +14,7 @@
     line-height: 24px;
     outline-style: inherit;
     margin-bottom: 47px;
+    margin-top: 33px;
   }
   
   .searchBar::placeholder {
@@ -25,6 +26,6 @@
   
   .icon {
     position: absolute;
-    top: 20px;
+    top: 53px;
     left: 19px;
   }
