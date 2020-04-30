@@ -3,8 +3,42 @@ import styles from './buy.module.css';
 
 class Buy extends Component {
 
-    clickMe=()=>{
-        console.log('clicked')
+    state = {
+        amount: 0,
+        stock: {},
+        balance: 0,
+        userStocks: []
+    }
+
+    onIcreaseClick = () => {
+        this.setState({amount: this.state.amount + 1})
+    }
+
+    onDecreaseClick = () => {
+        if (this.state.amount !== 0){
+            this.setState({amount: this.state.amount - 1})
+        }
+    }
+
+    createNewStock = () => {
+        const {userStocks} = this.state;
+        const index = userStocks.findIndex(stock => this.state.stock.symbol === stock.code)
+        if (!~index){
+            return {...userStocks[index], amount: userStocks[index].amount + this.state.amount}
+        }
+        return {}
+    }
+
+    onBuyClick = () => {
+        const {amount, balance, stock} = this.state;
+        if(amount * stock.price <= balance) {
+
+        }
+    }
+
+    componentDidMount() {
+        const { selectedStock, currentBalance, userStock } = this.props;
+        this.setState({stock: selectedStock, balance: currentBalance, userStocks: userStock})
     }
 
     render() {
@@ -18,7 +52,7 @@ class Buy extends Component {
                         </svg>
                         <span>Back</span>
                     </button>
-                    <div className={styles.stockName}>Buy Apple</div>
+                    <div className={styles.stockName}>Buy {this.state.stock.name}</div>
                     {/* section with stock's price, counter and *Buy* button */}
                 </section>
 
@@ -26,21 +60,21 @@ class Buy extends Component {
 
                 <section className={styles.middle}>
                     <div className={styles.currentStockPrice}>
-                        247.47$
+                        {this.state.stock.price}
                     </div>
                     <div className={styles.stockBuyCounter}>
-                        <button onClick={this.clickMe} className={styles.minusButton}>
+                        <button onClick={this.onDecreaseClick} className={styles.minusButton}>
                             -
                         </button>
-                        <p className={styles.stocksCount}>10</p>
-                        <button onClick={this.clickMe} className={styles.plusButton}>
+                        <p className={styles.stocksCount}>{this.state.amount}</p>
+                        <button onClick={this.onIcreaseClick} className={styles.plusButton}>
                             +
                         </button>
                     </div>
                     <div className={styles.totalStocksPrice}>
-                        Buy for <span className={styles.span}>2 474.70</span>$
+                        Buy for <span className={styles.span}>{this.state.stock.price * this.state.amount}</span>$
                     </div>
-                    <button className={styles.buyButton}>Buy</button>
+                    <button onclick={this.onBuyClick} className={styles.buyButton}>Buy</button>
                 </section>
             </main>
         )

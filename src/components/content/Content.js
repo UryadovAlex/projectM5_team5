@@ -14,7 +14,10 @@ class Content extends React.Component {
             <div className = { styles.wrapper }>
                 <Route exact path='/account' render={() => <Account userStock={userStock}/>} />
                 <Route path='/stock' render={() => <Stock />} />
-                <Route path='/buy' render={() => <Buy />} />
+                <Route path='/buy' render={() => <Buy
+                    currentBalance={this.props.currentBalance}
+                    selectedStock={this.props.selectedStock}
+                    userStock={this.props.userStock}/>} />
             </div>
         );
     }

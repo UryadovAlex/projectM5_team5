@@ -2,34 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b8349ec-68d7-401d-b15f-5e43a8452489" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/m5-team5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/buy/buy.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/stock/Stock.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/stock/Stock.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/stock/search-bar/SearchBar.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/Content.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/buy/Buy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/buy/Buy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/stock/Stock.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/stock/search-bar/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/stock/search-bar/SearchBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/stock/stock-list/StockList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/stock/stock-list/StockList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/stock/stock-list/StockList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/stock/stock-list/StockList.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/stock/stock-list/stock-item/StockItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/stock/stock-list/stock-item/StockItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/stock/stock-list/stock-item/StockItem.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/stock/stock-list/stock-item/StockItem.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/stock/stock-list/stock-item/search-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/stock/search-bar/search-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/buy/buy.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/buy/buy.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/data/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data/data.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +32,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebstormProjects/react-day2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -70,8 +49,16 @@
       <option name="presentableId" value="Default" />
       <updated>1588232632287</updated>
       <workItem from="1588232637768" duration="26223000" />
-      <workItem from="1588262917128" duration="529000" />
+      <workItem from="1588262917128" duration="4836000" />
     </task>
+    <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/UryadovAlex/projectM5_team5&#10;&#10;# Conflicts:&#10;#&#9;src/components/content/Content.js&#10;#&#9;yarn.lock">
+      <created>1588263562265</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588263562265</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,8 +66,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/UryadovAlex/projectM5_team5&#10;&#10;# Conflicts:&#10;#&#9;src/components/content/Content.js&#10;#&#9;yarn.lock" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/UryadovAlex/projectM5_team5&#10;&#10;# Conflicts:&#10;#&#9;src/components/content/Content.js&#10;#&#9;yarn.lock" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1588263559590">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588263559590" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1588268885588">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588268885588" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1588263022153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -34,6 +34,7 @@ export const addUsersStock = stock => {
     const data = {
         code: "NKE",
         amount: 4,
+        name: "Apple",
         purchasePrice: 737.00
     }
     fetch(`${URL}/stocks`, {

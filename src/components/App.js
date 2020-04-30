@@ -23,7 +23,7 @@ export default class App extends Component {
             const stocks = await getAllStocks();
             const userStock = await getAllUsersStocks();
             //updateUserDetails(100000);
-            //addUsersStock();
+            addUsersStock();
             this.setState({userDetails, stocks, userStock})
         } catch (e) {
             console.log(e);
@@ -35,7 +35,11 @@ export default class App extends Component {
         return (
             <BrowserRouter>
                 <Header />
-                <Content userStock={this.state.userStock}/>
+                <Content
+                    userStock={this.state.userStock}
+                    currentBalance={this.state.userDetailscurrentBalance}
+                    selectedStock={this.state.selectedStock}
+                    userStock={this.state.userStock}/>
                 <Footer />
             </BrowserRouter>
         )

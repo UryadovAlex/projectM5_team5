@@ -99,6 +99,11 @@
     
 }
 
+.minusButton:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 .plusButton{
     height:75px;
     width:50px;
@@ -112,6 +117,12 @@
     /* background-color: green; */
     
 }
+
+.plusButton:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 .totalStocksPrice{
     margin-top:25px;
     font-family: Roboto;
@@ -136,4 +147,9 @@
     color:#833AE0;
     font-size: 24px;
     background-color:white;
+}
+
+.buyButton:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
