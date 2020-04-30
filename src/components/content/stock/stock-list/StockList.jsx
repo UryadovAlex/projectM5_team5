@@ -12,18 +12,25 @@ class StockList extends React.Component {
       { ticker: 'CCC', company: 'Nike Inc.', price: 2490.08 }
     ]
   }
-
+  searchName = (value, name) => {
+    name = name.toLowerCase();
+    value = value.toLowerCase();
+    return !name
+      .slice(0, value.length || name.length)
+      .indexOf(value || name);
+  }
   render() {
+    let arr = this.state.fakeArr.filter(item => this.searchName(this.props.inputValue, item.ticker));
     return (
-        <table className={styles.table}>
-          <tbody>
+      <table className={styles.table}>
+        <tbody>
           {
-            this.state.fakeArr.map((item) => {
-              return <StockItem {...item} key = { item.ticker }/>
+            arr.map((item) => {
+              return <StockItem {...item} key={item.ticker} />
             })
           }
-          </tbody>
-        </table>
+        </tbody>
+      </table>
     );
   }
 }

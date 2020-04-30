@@ -4,7 +4,6 @@ import styles from './StockItem.module.css';
 
 class StockItem extends React.Component {
   render() {
-    console.log(this.props);
     const { ticker, company, price } = this.props;
     let cost = price.toString().split('.');
     return (

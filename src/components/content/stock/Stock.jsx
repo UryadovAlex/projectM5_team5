@@ -4,11 +4,17 @@ import StockList from './stock-list/StockList';
 import styles from './Stock.module.css';
 
 export default class Stock extends Component {
+    state = {
+        inputValue: ''
+    }
+    getInputValue = (value) => {
+        this.setState({inputValue: value})
+    }
     render() {
         return (
             <section className={styles.stock}>
-                <SearchBar />
-                <StockList />
+                <SearchBar getInputValue={this.getInputValue} />
+                <StockList inputValue={this.state.inputValue}/>
             </section>
         )
     }
