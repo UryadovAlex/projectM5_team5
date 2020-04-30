@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-
-
-class App extends React.Component{
-    
-    render(){
-        return(
-            
-
-
-
-<p>as</p>
-        )
-    }
-}
-
-export default App;
-=======
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
 
@@ -40,4 +20,3 @@ export default class App extends Component {
         )
     }
 }
->>>>>>> 08c5b4525d9c282b7700ad61999ca5a2318720d6
