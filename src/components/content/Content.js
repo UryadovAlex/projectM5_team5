@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Account from "./account/Account";
 import styles from './Content.module.css';
+import Stock from './stock/Stock.jsx';
+import Buy from './buy/Buy'
 
 
 class Content extends React.Component {
@@ -11,8 +13,8 @@ class Content extends React.Component {
         return (
             <div className = { styles.wrapper }>
                 <Route exact path='/account' render={() => <Account userStock={userStock}/>} />
-                {/* <Route path='/stock' render={() => <Stock />} />
-                <Route path='/buy' render={() => <Buy />} /> */}
+                <Route path='/stock' render={() => <Stock />} />
+                <Route path='/buy' render={() => <Buy />} />
             </div>
         );
     }

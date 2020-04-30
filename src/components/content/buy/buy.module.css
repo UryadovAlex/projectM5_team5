@@ -1,0 +1,139 @@
+.header{
+    display:flex;
+    width:84%;
+    flex-direction: row;
+    /* background-color: red; */
+    margin:0 auto;
+    min-width:800px;
+}
+
+.button{
+    color:#833AE0;
+    background-color: white;
+    width:174px;
+    height:48px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    border:none;
+    margin-left:4%;
+    margin-top:34px;  
+}
+
+.hr{
+    border-top: 1px solid white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+.stockName{
+    min-width:318px;
+    height:50px;    
+    margin-left:17%;
+    vertical-align: center;
+    /* background-color: blue; */
+    font-family: Roboto;
+    font-size: 48px;
+    line-height: 24px;
+    text-align: center;
+    /* color:#2FC20A; */
+    padding-top:28px;
+    margin-top:20px;
+    color:#2FC20A;
+}
+.middle{
+    display:flex;
+    flex-direction: column;
+    margin:0 auto;
+    width:33%;
+    align-items: center;
+    margin-top:66px;
+
+}
+
+.currentStockPrice{
+    /* background-color: blue; */
+    width:50%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 14px;
+    text-align: center;
+    padding-top:10px;
+    padding-bottom:10px;   
+}
+
+.stockBuyCounter{
+    margin-top:10px;
+    background-color: white;
+    width:55%;
+    min-width: 370px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.stocksCount{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 14px;
+    color: #833AE0
+}
+
+.minusButton{
+    height:75px;
+    width:50px;
+    border:none;
+    border:1px solid white;
+    font-size:60px;
+    color: #833AE0;
+    background-color: white;  
+    /* background-color: green; */
+    margin-top:33px;
+    outline:none;
+    
+}
+
+.plusButton{
+    height:75px;
+    width:50px;
+    background-color: white;
+    border:none;
+    font-size:60px;
+    margin-top:40px;
+    color: #833AE0;
+    outline:none;
+    
+    /* background-color: green; */
+    
+}
+.totalStocksPrice{
+    margin-top:25px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 14px;
+    text-align: center;
+    min-width: 370px;
+}
+
+.span{
+    font-size: 30px;
+}
+
+.buyButton{
+    margin-top:47px;
+    width:170px;
+    height:49px;
+    border:2px solid #833AE0;
+    border-radius:25px;
+    color:#833AE0;
+    font-size: 24px;
+    background-color:white;
+}

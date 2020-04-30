@@ -3,5 +3,5 @@
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    border-bottom: 1px solid black;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
 }
