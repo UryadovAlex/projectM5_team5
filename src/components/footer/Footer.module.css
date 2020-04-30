@@ -1,0 +1,33 @@
+.wrapper {
+    height: 67px;
+    background: #833AE0;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Roboto;
+    font-style: normal;
+    color: #FFDC40;
+    position: relative;
+}
+
+.amount {
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 24px;
+}
+
+.label {
+    position: absolute;
+    left: 100px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.cents {
+    font-size: 22px;
+    line-height: 24px;
+}
