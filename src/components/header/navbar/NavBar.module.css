@@ -1,0 +1,33 @@
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.item {
+    width: 173px;
+    height: 44px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.link:hover {
+    color: #FFDC40;
+    border-bottom: 2px solid black;
+}
+
+.active {
+    color: #833AE0;
+    border-bottom: 2px solid #833AE0;
+} 
