@@ -24,9 +24,7 @@ class Buy extends Component {
 
     buyRequestStock = () => {
         const {userStocks, stock} = this.state;
-        console.log(userStocks)
         const index = userStocks.findIndex(stock => this.state.stock.symbol === stock.symbol)
-        console.log(index)
         if (~index){
 
             const updateStock = {
@@ -36,7 +34,6 @@ class Buy extends Component {
             };
 
             const {id, ...stockRest} = updateStock;
-            console.log(updateStock, 'update');
             updateUsersStock(id, stockRest);
         } else {
             const newStock = {
@@ -46,7 +43,6 @@ class Buy extends Component {
                 userId: 5
             }
             addUsersStock(newStock);
-            console.log(newStock, 'new')
         }
     }
 
@@ -57,17 +53,14 @@ class Buy extends Component {
             balance -= amount * stock.price;
             console.log(balance);
             const userStock = await getAllUsersStocks();
-            console.log(userStock);
             this.setState({balance, userStock})
             updateUserDetails(balance);
         }
-        console.log(balance);
     }
 
     actualInfo = async () => {
         const userStocks = await getAllUsersStocks();
         const { selectedStock, currentBalance } = this.props;
-        console.log(currentBalance);
         this.setState({stock: selectedStock, balance: currentBalance, userStocks})
     }
 
@@ -78,7 +71,6 @@ class Buy extends Component {
     render() {
         
         let cost = this.state.stock.price ? this.state.stock.price.toString().split('.') : '';
-        //console.log(this.createNewStock())
         return (
             <main className={styles.main}>
                 {/* section with *Back* button and picked stock  */}
@@ -112,8 +104,7 @@ class Buy extends Component {
                     </div>
                     <NavLink to="/stock" className={styles.buyButton} onClick={()=>{
                         this.onBuyClick()
-                        console.log('buy')
-                    }} className={styles.buyButton}>Buy</NavLink>
+                    }}>Buy</NavLink>
                 </section>
             </main>
         )

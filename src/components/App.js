@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import Header from './header/Header';
 import Footer from './footer/Footer';
 import Content from './content/Content';
-import {getUserDetails, getAllStocks, getAllUsersStocks, addUsersStock, deleteUsersStock} from './data/data';
+import {getUserDetails, getAllStocks, getAllUsersStocks} from './data/data';
 
 
 export default class App extends Component {

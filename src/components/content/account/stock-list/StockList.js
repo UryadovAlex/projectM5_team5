@@ -31,7 +31,11 @@ class StockList extends React.Component {
                     </tbody>
                 </table>
                 {
-                    this.props.userStock.length > 20 && <Pagination count={Math.ceil(this.props.userStock.length / this.state.pageSize)} color="primary" onChange={this.handlePageChange} />
+                    this.props.userStock.length > 20 &&
+                    <Pagination
+                        count={Math.ceil(this.props.userStock.length / this.state.pageSize)}
+                        color="primary"
+                        onChange={this.handlePageChange} />
                 }
             </div>
         );

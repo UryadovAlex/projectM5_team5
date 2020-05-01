@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 import Account from "./account/Account";
 import styles from './Content.module.css';
 import Stock from './stock/Stock.jsx';
@@ -12,6 +12,7 @@ class Content extends React.Component {
         return (
             <div className={styles.wrapper}>
                 <Route exact path='/account' render={() => <Account userStock={userStock} stocks={this.props.stocks}/>}/>
+                <Route exact path='/' render={() => <Account userStock={userStock} stocks={this.props.stocks}/>}/>
                 <Route path='/stock' render={() => <Stock onSelectStock={this.props.onSelectStock}/>}/>
                 <Route path='/buy' render={() => <Buy
                     currentBalance={this.props.currentBalance}

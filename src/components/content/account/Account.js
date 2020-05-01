@@ -7,7 +7,7 @@ class Account extends React.Component{
         const {userStock, stocks} = this.props;
         return (
             <div>
-                <Balance userStock={userStock} stocks={this.props.stocks}/>
+                <Balance userStock={userStock} stocks={stocks}/>
                 <StockList userStock={userStock}/>
             </div>
         );
