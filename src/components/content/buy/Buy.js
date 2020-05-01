@@ -110,7 +110,7 @@ class Buy extends Component {
                     <div className={styles.totalStocksPrice}>
                         Buy for <span className={styles.span}>{(this.state.stock.price * this.state.amount).toFixed(2)}</span>$
                     </div>
-                    <NavLink to="/stock" onClick={()=>{
+                    <NavLink to="/stock" className={styles.buyButton} onClick={()=>{
                         this.onBuyClick()
                         console.log('buy')
                     }} className={styles.buyButton}>Buy</NavLink>
