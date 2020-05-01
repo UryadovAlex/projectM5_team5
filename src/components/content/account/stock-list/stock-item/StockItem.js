@@ -21,7 +21,7 @@ class StockItem extends React.Component {
         let {code, amount, purchasePrice, name} = this.props;
         //const [profit, percent] = this.calculateProfit(price, price -1);
         //const changing = {profit > 0 ? `+${profit}` : `${profit}`}$({percent}%)
-        let price = purchasePrice.toString().split('.');
+        let price = purchasePrice.toFixed(2).toString().split('.');
         return (
             <tr className={style.row}>
                 <td className={style.symbol}>{code}</td>

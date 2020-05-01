@@ -1,0 +1,27 @@
+.balance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.balance h1{
+    text-align: center;
+    font-size: 64px;
+    line-height: 24px;
+}
+
+.balance p{
+    text-align: center;
+    font-size: 18px;
+    line-height: 10px;
+    margin: 0;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: #2FC20A;
+}

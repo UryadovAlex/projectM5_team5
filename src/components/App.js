@@ -46,6 +46,7 @@ export default class App extends Component {
                     selectedStock={this.state.selectedStock}
                     userStock={this.state.userStock}
                     onSelectStock={this.onSelectStock}
+                    stocks={this.state.stocks.symbolsList}
                 />
                 <Footer currentBalance={this.state.userDetails.currentBalance}/>
             </BrowserRouter>

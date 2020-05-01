@@ -11,7 +11,7 @@ class Content extends React.Component {
         const {userStock} = this.props;
         return (
             <div className={styles.wrapper}>
-                <Route exact path='/account' render={() => <Account userStock={userStock}/>}/>
+                <Route exact path='/account' render={() => <Account userStock={userStock} stocks={this.props.stocks}/>}/>
                 <Route path='/stock' render={() => <Stock onSelectStock={this.props.onSelectStock}/>}/>
                 <Route path='/buy' render={() => <Buy
                     currentBalance={this.props.currentBalance}

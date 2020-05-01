@@ -4,10 +4,10 @@ import StockList from "./stock-list/StockList";
 
 class Account extends React.Component{
     render() {
-        const {userStock} = this.props;
+        const {userStock, stocks} = this.props;
         return (
             <div>
-                <Balance />
+                <Balance userStock={userStock} stocks={this.props.stocks}/>
                 <StockList userStock={userStock}/>
             </div>
         );
