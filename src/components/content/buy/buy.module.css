@@ -30,6 +30,13 @@
     text-align: left;
     background-color: white;
     width:16%;
+    margin-top:17px;
+    text-decoration: none;
+}
+
+.priceDecimal{
+    font-size: 20px;
+    line-height: 18px;
 }
 
 
@@ -42,16 +49,13 @@
 .stockName{
     width:40%;
     min-width:318px;
-    height:50px;    
-    vertical-align: center;
     font-family: Roboto;
-    font-size: 48px;
-    line-height: 24px;
+    font-size: 38px;
+    line-height: 34px;
     text-align: center;
     /* color:#2FC20A; */
     padding-top:13px;
     color:#2FC20A;
-   
 }
 .middle{
     display:flex;

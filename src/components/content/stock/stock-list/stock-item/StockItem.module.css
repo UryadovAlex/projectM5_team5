@@ -1,18 +1,23 @@
 .ticker {
-  margin-right: 30px;
   font-size: 12px;
   line-height: 10px;
   color: rgba(0, 0, 0, 0.5);
+  width:150px;
 }
 
 .company {
   font-size: 22px;
   line-height: 18px;
+  width:450px;
+
+  
 }
 
 .priceInteger {
   font-size: 30px;
   line-height: 18px;
+  width:200px;
+  text-align: right;
 }
 
 .priceDecimal {
@@ -20,8 +25,14 @@
   line-height: 18px;
 }
 
+/* .tr{
+  border:1px solid black;
+} */
+
 .row {
   width: 100%;
+  display:flex;
+  justify-content: space-between;
 }
 
 .row:hover {

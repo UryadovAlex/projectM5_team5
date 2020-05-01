@@ -11,7 +11,7 @@ class StockList extends React.Component {
   state = {
     arrayStock: [],
 
-    pageSize: 5,
+    pageSize: 20,
     currentPage: 1
   }
   searchName = (value, name) => {
@@ -39,8 +39,8 @@ class StockList extends React.Component {
     let arr = this.state.arrayStock.filter(item => this.searchName(this.props.inputValue, item.symbol));
     const { pageSize, currentPage } = this.state
     return (
-      <>
-        <div>
+      <div className={styles.main}>
+        <div className={styles.wrapper}>
           <table className={styles.table}>
             <tbody>
               {
@@ -49,8 +49,8 @@ class StockList extends React.Component {
             </tbody>
           </table>
         </div>
-        <Pagination count={Math.ceil(this.state.arrayStock.length/5)} color="primary" onChange={this.handlePageChange} />
-      </>
+        <Pagination className={styles.page} count={Math.ceil(this.state.arrayStock.length/this.state.pageSize)} color="primary" onChange={this.handlePageChange} />
+      </div>
 
     );
   }

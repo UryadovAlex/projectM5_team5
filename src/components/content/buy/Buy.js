@@ -76,6 +76,8 @@ class Buy extends Component {
     }
 
     render() {
+        
+        let cost = this.state.stock.price ? this.state.stock.price.toString().split('.') : '';
         //console.log(this.createNewStock())
         return (
             <main className={styles.main}>
@@ -91,12 +93,10 @@ class Buy extends Component {
                     {/* section with stock's price, counter and *Buy* button */}
                     <div className={styles.fake}></div>
                </section>
-
-                {/* <hr className={styles.hr} /> */}
-
                 <section className={styles.middle}>
                     <div className={styles.currentStockPrice}>
-                        {this.state.stock.price}
+                    {cost[0]}{cost[1] ? '.' : ''}<span
+                        className={styles.priceDecimal}>{cost[1]} {this.state.stock.price ? ' $' : ''}</span>
                     </div>
                     <div className={styles.stockBuyCounter}>
                         <button onClick={this.onDecreaseClick} className={styles.minusButton}>
