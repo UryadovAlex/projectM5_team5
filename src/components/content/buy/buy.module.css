@@ -1,16 +1,25 @@
 .header{
     display:flex;
-    width:84%;
+    width:100%;
     flex-direction: row;
-    /* background-color: red; */
-    margin:0 auto;
-    min-width:800px;
+    min-width:550px;
+    justify-content: space-evenly;
+}
+
+.fake{
+    width:100px;
+    width:16%;
+}
+
+.main{
+    width:100%;
+    margin-bottom:22px;
+    min-width:550px;
+    margin-top:7px;
 }
 
 .button{
     color:#833AE0;
-    background-color: white;
-    width:174px;
     height:48px;
     font-family: Roboto;
     font-style: normal;
@@ -18,9 +27,11 @@
     font-size: 24px;
     line-height: 24px;
     border:none;
-    margin-left:4%;
-    margin-top:34px;  
+    text-align: left;
+    background-color: white;
+    width:16%;
 }
+
 
 .hr{
     border-top: 1px solid white;
@@ -29,32 +40,31 @@
 
 
 .stockName{
+    width:40%;
     min-width:318px;
     height:50px;    
-    margin-left:17%;
     vertical-align: center;
-    /* background-color: blue; */
     font-family: Roboto;
     font-size: 48px;
     line-height: 24px;
     text-align: center;
     /* color:#2FC20A; */
-    padding-top:28px;
-    margin-top:20px;
+    padding-top:13px;
     color:#2FC20A;
+   
 }
 .middle{
     display:flex;
     flex-direction: column;
     margin:0 auto;
-    width:33%;
+    width:40%;
     align-items: center;
     margin-top:66px;
+ 
 
 }
 
 .currentStockPrice{
-    /* background-color: blue; */
     width:50%;
     font-family: Roboto;
     font-style: normal;
@@ -147,11 +157,6 @@
     color:#833AE0;
     font-size: 24px;
     background-color:white;
-    text-align: center;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .buyButton:hover {

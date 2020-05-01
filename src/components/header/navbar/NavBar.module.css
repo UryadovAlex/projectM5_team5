@@ -1,19 +1,28 @@
 .list {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     list-style: none;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     line-height: 24px;
+    width:30%;
+    justify-content: space-around;
 }
 
-.item {
-    width: 173px;
+.item1 {
+    display:inline-block;
+    width:140px;
     height: 44px;
+    text-align: center;
+}
+.item2 {
+    display:inline-block;
+    height: 44px;
+    text-align: center;
 }
 
 .link {

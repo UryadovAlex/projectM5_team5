@@ -1,7 +1,8 @@
 .table {
   margin: 0;
   width: 759px;
-  margin-bottom: 90px;
+  margin-bottom: 20px;
+  background-color: red;
 }
 
 .table td {

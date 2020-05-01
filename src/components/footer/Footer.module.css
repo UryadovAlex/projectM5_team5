@@ -1,22 +1,27 @@
 .footer {
-    position: fixed;
+    position: sticky;
     bottom: 0;
-    width: 100%;
+
 }
 
 .wrapper {
     height: 67px;
     background: #833AE0;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.15);
-
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-
     font-family: Roboto;
     font-style: normal;
     color: #FFDC40;
     position: relative;
+    width:100%;
+
+}
+
+.fake{
+
+    width:20%;
 
 }
 
@@ -24,10 +29,12 @@
     font-weight: normal;
     font-size: 36px;
     line-height: 24px;
+    width:30%;
+    text-align: center;
 }
 
 .label {
-    position: absolute;
+    width:20%;
     left: 100px;
     font-weight: bold;
     font-size: 22px;

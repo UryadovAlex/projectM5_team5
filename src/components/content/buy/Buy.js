@@ -78,7 +78,7 @@ class Buy extends Component {
     render() {
         //console.log(this.createNewStock())
         return (
-            <main >
+            <main className={styles.main}>
                 {/* section with *Back* button and picked stock  */}
                 <section className={styles.header}>
                     <NavLink to="/stock" className={styles.button}>
@@ -89,9 +89,10 @@ class Buy extends Component {
                     </NavLink>
                     <div className={styles.stockName}>Buy {this.state.stock.name}</div>
                     {/* section with stock's price, counter and *Buy* button */}
-                </section>
+                    <div className={styles.fake}></div>
+               </section>
 
-                <hr className={styles.hr} />
+                {/* <hr className={styles.hr} /> */}
 
                 <section className={styles.middle}>
                     <div className={styles.currentStockPrice}>
