@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import Header from './header/Header';
 import Footer from './footer/Footer';
 import Content from './content/Content';
-import {getUserDetails, getAllStocks, getAllUsersStocks, updateUserDetails, addUsersStock} from './data/data';
+import {getUserDetails, getAllStocks, getAllUsersStocks, addUsersStock, deleteUsersStock} from './data/data';
 
 
 export default class App extends Component {
@@ -16,19 +16,25 @@ export default class App extends Component {
         selectedStock: {}
     }
 
+    onSelectStock = stock => {
+        this.setState({selectedStock: stock});
+    }
+
 
     async componentDidMount() {
         try {
             const userDetails = await getUserDetails();
             const stocks = await getAllStocks();
             const userStock = await getAllUsersStocks();
-            //updateUserDetails(100000);
-            addUsersStock();
+            // // //updateUserDetails(100000);
+            // userStock.forEach((stock) => {
+            //     deleteUsersStock(stock.id);
+            // })
+
             this.setState({userDetails, stocks, userStock})
         } catch (e) {
             console.log(e);
         }
-
     }
 
     render() {
@@ -36,11 +42,12 @@ export default class App extends Component {
             <BrowserRouter>
                 <Header />
                 <Content
-                    userStock={this.state.userStock}
-                    currentBalance={this.state.userDetailscurrentBalance}
+                    currentBalance={this.state.userDetails.currentBalance}
                     selectedStock={this.state.selectedStock}
-                    userStock={this.state.userStock}/>
-                <Footer />
+                    userStock={this.state.userStock}
+                    onSelectStock={this.onSelectStock}
+                />
+                <Footer currentBalance={this.state.userDetails.currentBalance}/>
             </BrowserRouter>
         )
     }

@@ -31,18 +31,30 @@ export const getAllUsersStocks = async () => {
 
 // add users stock
 export const addUsersStock = stock => {
-    const data = {
-        code: "NKE",
-        amount: 4,
-        name: "Apple",
-        purchasePrice: 737.00
-    }
     fetch(`${URL}/stocks`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(stock)
+    })
+}
+
+// update user stocks by id
+export const updateUsersStock = (id ,stock) => {
+    fetch(`${URL}/stocks/${id}`, {
+        method: "PUT",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(stock)
+    })
+}
+
+//delete by id
+export const deleteUsersStock = id => {
+    fetch(`${URL}/stocks/${id}`, {
+        method: "DELETE",
     })
 }
 

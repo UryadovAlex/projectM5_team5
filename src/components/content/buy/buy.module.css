@@ -147,6 +147,11 @@
     color:#833AE0;
     font-size: 24px;
     background-color:white;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .buyButton:hover {

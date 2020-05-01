@@ -6,10 +6,24 @@ class StockList extends React.Component {
 
   state = {
     fakeArr: [
-      { ticker: 'NKE', company: 'Nike Inc.', price: 2490.08 },
-      { ticker: 'AAA', company: 'Nike Inc.', price: 2490.08 },
-      { ticker: 'BBB', company: 'Nike Inc.', price: 2490.08 },
-      { ticker: 'CCC', company: 'Nike Inc.', price: 2490.08 }
+      {
+        symbol: "SPY",
+        name: "SPDR S&P 500",
+        price: 289.31,
+        exchange: "NYSE Arca"
+      },
+      {
+        symbol: "SPY",
+        name: "SPDR S&P 500",
+        price: 289.31,
+        exchange: "NYSE Arca"
+      },
+      {
+        symbol: "SPY",
+        name: "SPDR S&P 500",
+        price: 289.31,
+        exchange: "NYSE Arca"
+      },
     ]
   }
   searchName = (value, name) => {
@@ -20,13 +34,13 @@ class StockList extends React.Component {
       .indexOf(value || name);
   }
   render() {
-    let arr = this.state.fakeArr.filter(item => this.searchName(this.props.inputValue, item.ticker));
+    let arr = this.state.fakeArr.filter(item => this.searchName(this.props.inputValue, item.symbol));
     return (
       <table className={styles.table}>
         <tbody>
           {
             arr.map((item) => {
-              return <StockItem {...item} key={item.ticker} />
+              return <StockItem onSelectStock={this.props.onSelectStock} stock={item} key={item.symbol} />
             })
           }
         </tbody>

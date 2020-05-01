@@ -5,9 +5,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/Content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/Content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/Content.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/account/stock-list/stock-item/StockItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/account/stock-list/stock-item/StockItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/buy/Buy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/buy/Buy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/buy/buy.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/buy/buy.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/stock/Stock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/stock/Stock.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/stock/stock-list/StockList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/stock/stock-list/StockList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/stock/stock-list/stock-item/StockItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/stock/stock-list/stock-item/StockItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/data/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1588232632287</updated>
       <workItem from="1588232637768" duration="26223000" />
-      <workItem from="1588262917128" duration="4836000" />
+      <workItem from="1588262917128" duration="21032000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/UryadovAlex/projectM5_team5&#10;&#10;# Conflicts:&#10;#&#9;src/components/content/Content.js&#10;#&#9;yarn.lock">
       <created>1588263562265</created>

@@ -18,7 +18,7 @@ class StockItem extends React.Component {
 // },
 
     render() {
-        let {code, amount, purchasePrice, change} = this.props;
+        let {code, amount, purchasePrice, name} = this.props;
         //const [profit, percent] = this.calculateProfit(price, price -1);
         //const changing = {profit > 0 ? `+${profit}` : `${profit}`}$({percent}%)
         let price = purchasePrice.toString().split('.');
@@ -26,8 +26,8 @@ class StockItem extends React.Component {
             <tr className={style.row}>
                 <td className={style.symbol}>{code}</td>
                 <td className={style.name}>
-                    {code.slice(0, 12)}
-                    <span className={style.transparent}>{code.slice(12, 14)}</span>
+                    {name.slice(0, 12)}
+                    <span className={style.transparent}>{name.slice(12, 14)}</span>
                 </td>
                 <td className={style.symbol}>{amount} pcs</td>
                 <td className={style.price}>
