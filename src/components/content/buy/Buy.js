@@ -56,6 +56,7 @@ class Buy extends Component {
             this.setState({balance, userStock})
             updateUserDetails(balance);
         }
+        this.props.updateUserDetails();
     }
 
     actualInfo = async () => {

@@ -30,14 +30,24 @@ export default class App extends Component {
             // userStock.forEach((stock) => {
             //     deleteUsersStock(stock.id);
             // })
-
             this.setState({userDetails, stocks, userStock})
         } catch (e) {
             console.log(e);
         }
     }
 
+    updateUserDetails = async () =>{
+        try {
+            const userDetails = await getUserDetails();
+            this.setState({userDetails})
+        } catch (e) {
+            console.log(e);
+        }
+
+    }
+
     render() {
+
         return (
             <BrowserRouter>
                 <Header />
@@ -47,6 +57,7 @@ export default class App extends Component {
                     userStock={this.state.userStock}
                     onSelectStock={this.onSelectStock}
                     stocks={this.state.stocks.symbolsList}
+                    updateUserDetails={this.updateUserDetails}
                 />
                 <Footer currentBalance={this.state.userDetails.currentBalance}/>
             </BrowserRouter>

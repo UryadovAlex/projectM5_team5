@@ -13,6 +13,7 @@ export default class SearchBar extends Component {
                     name="_search"
                     id="search"
                     placeholder='enter company ticker'
+                    value={this.props.inputValue}
                 />
                 <img className={styles.icon} src={searchIcon} alt="search-icon" />
             </div>

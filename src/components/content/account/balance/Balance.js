@@ -28,7 +28,7 @@ class Balance extends React.Component {
         const {percent, difference} = this.calculateTotalChange(this.getTotalPrice(), this.getMarketPrice());
         return (
             <div className={styles.balance}>
-                <h1>{this.getTotalPrice()}</h1>
+                <h1>{this.getTotalPrice().toFixed(2)}$</h1>
                 {this.props.stocks && <p>{difference.toFixed(2)}$({percent.toFixed(2)} %)</p>}
             </div>
         );

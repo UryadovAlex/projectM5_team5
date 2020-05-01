@@ -13,11 +13,13 @@ class Content extends React.Component {
             <div className={styles.wrapper}>
                 <Route exact path='/account' render={() => <Account userStock={userStock} stocks={this.props.stocks}/>}/>
                 <Route exact path='/' render={() => <Account userStock={userStock} stocks={this.props.stocks}/>}/>
-                <Route path='/stock' render={() => <Stock onSelectStock={this.props.onSelectStock}/>}/>
+                <Route path='/stock' render={() => <Stock
+                    onSelectStock={this.props.onSelectStock} stocks={this.props.stocks}/>}/>
                 <Route path='/buy' render={() => <Buy
                     currentBalance={this.props.currentBalance}
                     selectedStock={this.props.selectedStock}
-                    userStock={this.props.userStock}/>}/>
+                    userStock={this.props.userStock}
+                    updateUserDetails={this.props.updateUserDetails}/>}/>
             </div>
         );
     }

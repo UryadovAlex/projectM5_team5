@@ -4,8 +4,6 @@ import styles from './StockList.module.css';
 import { Pagination } from '@material-ui/lab';
 import { getAllStocks } from '../../../data/data'
 
-
-
 class StockList extends React.Component {
 
   state = {
@@ -16,25 +14,15 @@ class StockList extends React.Component {
   searchName = (value, name) => {
     name = name.toLowerCase();
     value = value.toLowerCase();
-    return !name
-      .slice(0, value.length || name.length)
-      .indexOf(value || name);
+    return name.slice(0, value.length || name.length) === (value || name);
   }
 
   handlePageChange = (event, pageNumber) => {
     this.setState({ currentPage: pageNumber });
   }
 
-  async componentDidMount() {
-    let arrayStock = await getAllStocks();
-    this.setState(
-      {
-        arrayStock: arrayStock.symbolsList
-      }
-    )
-  }
   render() {
-    let arr = this.state.arrayStock.filter(item => this.searchName(this.props.inputValue, item.symbol));
+    let arr =  this.props.stocks ? this.props.stocks.filter(item => this.searchName(this.props.inputValue, item.symbol)) : [] ;
     const { pageSize, currentPage } = this.state
     return (
       <div className={styles.main}>
@@ -51,11 +39,11 @@ class StockList extends React.Component {
             </tbody>
           </table>
         </div>
-        <Pagination
+        {this.props.stocks && <Pagination
             className={styles.page}
-            count={Math.ceil(this.state.arrayStock.length/this.state.pageSize)}
+            count={Math.ceil(arr.length / this.state.pageSize)}
             color="primary"
-            onChange={this.handlePageChange} />
+            onChange={this.handlePageChange}/>}
       </div>
 
     );

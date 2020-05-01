@@ -13,10 +13,11 @@ export default class Stock extends Component {
     render() {
         return (
             <section className={styles.stock}>
-                <SearchBar getInputValue={this.getInputValue} />
+                <SearchBar inputValue={this.state.inputValue} getInputValue={this.getInputValue} />
                 <StockList
                     inputValue={this.state.inputValue}
                     onSelectStock={this.props.onSelectStock}
+                    stocks={this.props.stocks}
                 />
             </section>
         )
