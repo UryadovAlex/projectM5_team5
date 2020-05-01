@@ -8,7 +8,7 @@ class StockItem extends React.Component {
         const {symbol, name, price} = this.props.stock;
         let cost = price.toString().split('.');
         return (
-            <NavLink to="/buy">
+            <NavLink to="/buy" className = {styles.link}>
                 <tr onClick={() => {
                     onSelectStock(this.props.stock);
                 }} className={styles.row}>
