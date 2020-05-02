@@ -6,6 +6,7 @@ import Header from './header/Header';
 import Footer from './footer/Footer';
 import Content from './content/Content';
 import {getUserDetails, getAllStocks, getAllUsersStocks} from './data/data';
+import Spinner from "./spinner/Spinner";
 
 
 export default class App extends Component {
@@ -13,7 +14,8 @@ export default class App extends Component {
         stocks : {},
         userStock: [],
         userDetails: {},
-        selectedStock: {}
+        selectedStock: {},
+        isLoading: false
     }
 
     onSelectStock = stock => {
@@ -23,6 +25,7 @@ export default class App extends Component {
 
     async componentDidMount() {
         try {
+            this.setState({isLoading: true})
             const userDetails = await getUserDetails();
             const stocks = await getAllStocks();
             const userStock = await getAllUsersStocks();
@@ -33,6 +36,8 @@ export default class App extends Component {
             this.setState({userDetails, stocks, userStock})
         } catch (e) {
             console.log(e);
+        }finally {
+            this.setState({isLoading: false})
         }
     }
 
@@ -50,6 +55,7 @@ export default class App extends Component {
 
         return (
             <BrowserRouter>
+                {this.state.isLoading && <Spinner />}
                 <Header />
                 <Content
                     currentBalance={this.state.userDetails.currentBalance}

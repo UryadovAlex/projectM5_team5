@@ -6,10 +6,10 @@
     justify-content: space-evenly;
 }
 
-.fake{
-    width:100px;
-    width:16%;
-}
+/*.fake{*/
+/*    width:100px;*/
+/*    width:16%;*/
+/*}*/
 
 .main{
     width:100%;
@@ -63,9 +63,7 @@
     margin:0 auto;
     width:40%;
     align-items: center;
-    margin-top:66px;
- 
-
+    /*margin-top:66px;*/
 }
 
 .currentStockPrice{

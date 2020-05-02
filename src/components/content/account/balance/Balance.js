@@ -29,7 +29,10 @@ class Balance extends React.Component {
         return (
             <div className={styles.balance}>
                 <h1>{this.getTotalPrice().toFixed(2)}$</h1>
-                {this.props.stocks && <p>{difference.toFixed(2)}$({percent.toFixed(2)} %)</p>}
+                {this.props.stocks &&
+                <p>
+                    {difference.toFixed(2)}$({percent.toFixed(2)} %)
+                </p>}
             </div>
         );
     }
