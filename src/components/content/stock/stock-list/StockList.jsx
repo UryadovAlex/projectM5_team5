@@ -43,19 +43,22 @@ class StockList extends React.Component {
             <tbody>
               {
                 arr.slice(pageSize * (currentPage - 1), pageSize * currentPage)
-                    .map(item =>  <StockItem
-                        onSelectStock={this.props.onSelectStock}
-                        stock={item}
-                        key={item.symbol} />)
+                  .map(item => <StockItem
+                    onSelectStock={this.props.onSelectStock}
+                    stock={item}
+                    key={item.symbol} />)
               }
             </tbody>
           </table>
         </div>
-        <Pagination
+        
+          <Pagination
             className={styles.page}
-            count={Math.ceil(this.state.arrayStock.length/this.state.pageSize)}
+            count={Math.ceil(this.state.arrayStock.length / this.state.pageSize)}
             color="primary"
             onChange={this.handlePageChange} />
+    
+
       </div>
 
     );

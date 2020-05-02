@@ -6,7 +6,7 @@ class StockItem extends React.Component {
     render() {
         const {onSelectStock} = this.props;
         const {symbol, name, price} = this.props.stock;
-        let cost = price.toString().split('.');
+        let cost = price.toString().split('.'); 
         return (
             <NavLink to="/buy" className = {styles.link}>
                 <tr className={styles.tr} onClick={() => {
