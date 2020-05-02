@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './buy.module.css';
-import {addUsersStock, getAllUsersStocks, updateUserDetails, updateUsersStock} from '../../data/data'
+import {addUsersStock, updateUserDetails, updateUsersStock} from '../../data/data'
 import {NavLink} from "react-router-dom";
 
 class Buy extends Component {
@@ -52,15 +52,15 @@ class Buy extends Component {
         if(totalPrice <= balance && totalPrice !== 0) {
             this.buyRequestStock();
             balance -= amount * stock.price;
-            const userStock = await getAllUsersStocks();
-            this.setState({balance, userStock, amount: 0})
+            this.props.updateUserStocks();
+            this.setState({balance, userStock: this.props.userStock, amount: 0})
             updateUserDetails(balance);
         }
         this.props.updateUserDetails(balance);
     }
 
-    actualInfo = async () => {
-        const userStocks = await getAllUsersStocks();
+    actualInfo = () => {
+        const userStocks = this.props.userStock;
         const { selectedStock, currentBalance } = this.props;
         this.setState({stock: selectedStock, balance: currentBalance, userStocks})
     }

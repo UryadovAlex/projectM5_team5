@@ -41,6 +41,10 @@ export default class App extends Component {
        this.setState({userDetails: balance});
     }
 
+    updateUserStocks = () => {
+        getAllUsersStocks().then(data => this.setState({userStock: data}))
+    }
+
     render() {
 
         return (
@@ -53,6 +57,7 @@ export default class App extends Component {
                     onSelectStock={this.onSelectStock}
                     stocks={this.state.stocks.symbolsList}
                     updateUserDetails={this.updateUserDetails}
+                    updateUserStocks={this.updateUserStocks}
                 />
                 <Footer currentBalance={this.state.userDetails}/>
             </BrowserRouter>

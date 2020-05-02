@@ -40,7 +40,7 @@ class Balance extends React.Component {
                     <div>
                         <h1>{plus}{this.getTotalPrice().toFixed(2)}$</h1>
                         <p className={color}>
-                            <img src={sign} alt="sign"/>
+                            {difference !== 0 && <img src={sign} alt="sign"/>}
                             {difference.toFixed(2)}$({percent.toFixed(2)} %)
                         </p>
                     </div>

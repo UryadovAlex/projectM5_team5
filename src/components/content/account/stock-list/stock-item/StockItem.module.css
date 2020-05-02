@@ -1,14 +1,3 @@
-table {
-    display: flex;
-    justify-content: center;
-    border-collapse: collapse;
-    margin:0 auto;
-    flex-direction: column;
-    overflow-y: scroll;
-    height:292px;
-    margin-top:0px;
-}
-
 .row {
     font-family: 'Roboto', sans-serif;
     border-bottom: 1px dashed #E0E0E0;
@@ -62,7 +51,7 @@ table {
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    width: 20%;
+    width: 150px;
     text-align: center;
 }
 

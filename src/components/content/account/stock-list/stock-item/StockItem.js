@@ -34,7 +34,7 @@ class StockItem extends React.Component {
                     <span className={style.decimal}>{purchasePrice[1]}</span> $
                 </td>
                 <td className={color}>
-                    <img src={sign} alt="sign"/>
+                    {profit !== 0 && <img src={sign} alt="sign"/>}
                     {plus}{(profit * amount).toFixed(2)}$({plus}{percent}%)
                 </td>
             </tr>

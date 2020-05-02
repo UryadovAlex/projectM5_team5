@@ -1,6 +1,7 @@
 import React from "react";
 import StockItem from "./stock-item/StockItem";
 import { Pagination } from '@material-ui/lab';
+import styles from './StockList.module.css';
 
 class StockList extends React.Component {
 
@@ -25,7 +26,7 @@ class StockList extends React.Component {
     render() {
         const { pageSize, currentPage } = this.state
         return (
-            <div>
+            <div className={styles.table}>
                 <table>
                     <tbody>
                         {this.getStockList().slice(pageSize * (currentPage - 1), pageSize * currentPage)}

@@ -1,14 +1,22 @@
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 35px;
-  height:292px;
-  width:40%;
-  margin:0 auto;
-  font-family: Roboto;
+/*.wrapper {*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  flex-direction: column;*/
+/*  margin-bottom: 35px;*/
+/*  height:292px;*/
+/*  margin:0 auto;*/
+/*  font-family: Roboto;*/
 
+/*}*/
+
+.table table{
+  justify-content: center;
+  border-collapse: collapse;
+  margin:0 auto;
+  flex-direction: column;
+  overflow-y: scroll;
+  height:292px;
 }
 
 .main{
@@ -18,7 +26,6 @@
 
 
 .page{
-  width:27%;
   margin:0 auto;
   padding-top:30px;
   height:80px;
