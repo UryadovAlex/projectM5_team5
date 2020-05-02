@@ -1,38 +1,37 @@
 .ticker {
-  font-size: 12px;
-  line-height: 10px;
+  font-size: 10px;
   color: rgba(0, 0, 0, 0.5);
   width:150px;
+  height:10px;
 }
 
 .company {
-  font-size: 22px;
-  line-height: 18px;
+  font-size: 18px;
   width:450px;
-
-  
+  height:10px;
 }
 
 .priceInteger {
-  font-size: 30px;
-  line-height: 18px;
+  font-size: 18px;
   width:200px;
   text-align: right;
+  height:10px;
 }
 
 .priceDecimal {
-  font-size: 20px;
-  line-height: 18px;
+  font-size: 14px;
+
 }
 
-/* .tr{
-  border:1px solid black;
-} */
+.tr{
+  height:30px;
+}
 
 .row {
   width: 100%;
   display:flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  height:30px;
 }
 
 .row:hover {

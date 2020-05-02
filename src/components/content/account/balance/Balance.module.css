@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: 'Roboto', sans-serif;
 }
 
 .balance h1{
@@ -10,17 +11,19 @@
     font-size: 64px;
     line-height: 24px;
     font-family: 'Roboto', sans-serif;
+    margin-top:-30px;
 }
 
 .balance p{
     text-align: center;
     font-size: 18px;
-    line-height: 10px;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .red {
-    color: red;
+    color: #FF2C2C;
 }
 
 .green {

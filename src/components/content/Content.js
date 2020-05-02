@@ -18,7 +18,8 @@ class Content extends React.Component {
                 <Route path='/buy' render={() => <Buy
                     currentBalance={this.props.currentBalance}
                     selectedStock={this.props.selectedStock}
-                    userStock={this.props.userStock}
+                    userStock={userStock}
+                    updateUserStocks={this.props.updateUserStocks}
                     updateUserDetails={this.props.updateUserDetails}/>}/>
             </div>
         );
