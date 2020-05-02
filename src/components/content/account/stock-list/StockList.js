@@ -13,13 +13,14 @@ class StockList extends React.Component {
 
     getStockList = () => {
         return this.props.userStock.map(stock => {
-            return <StockItem key={stock.id} {...stock}/>
+            const priceInMarket = this.props.stocks.find(s => stock.symbol === s.symbol).price;
+            return <StockItem key={stock.id} {...stock} priceInMarket={priceInMarket} />
         })
     }
 
     handlePageChange = (event, pageNumber) => {
         this.setState({ currentPage: pageNumber });
-      }
+    }
 
     render() {
         const { pageSize, currentPage } = this.state
