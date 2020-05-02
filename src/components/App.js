@@ -6,16 +6,14 @@ import Header from './header/Header';
 import Footer from './footer/Footer';
 import Content from './content/Content';
 import {getUserDetails, getAllStocks, getAllUsersStocks} from './data/data';
-import Spinner from "./spinner/Spinner";
 
 
 export default class App extends Component {
     state = {
         stocks : {},
         userStock: [],
-        userDetails: {},
-        selectedStock: {},
-        isLoading: false
+        userDetails: 0,
+        selectedStock: {}
     }
 
     onSelectStock = stock => {
@@ -25,47 +23,38 @@ export default class App extends Component {
 
     async componentDidMount() {
         try {
-            this.setState({isLoading: true})
-            const userDetails = await getUserDetails();
-            const stocks = await getAllStocks();
-            const userStock = await getAllUsersStocks();
+            Promise.all([getUserDetails(), getAllStocks(), getAllUsersStocks()])
+                .then(data => {
+                    this.setState({userDetails: data[0].currentBalance, stocks: data[1], userStock: data[2]})
+                })
             // // //updateUserDetails(100000);
             // userStock.forEach((stock) => {
             //     deleteUsersStock(stock.id);
             // })
-            this.setState({userDetails, stocks, userStock})
+
         } catch (e) {
             console.log(e);
-        }finally {
-            this.setState({isLoading: false})
         }
     }
 
-    updateUserDetails = async () =>{
-        try {
-            const userDetails = await getUserDetails();
-            this.setState({userDetails})
-        } catch (e) {
-            console.log(e);
-        }
-
+    updateUserDetails = balance =>{
+       this.setState({userDetails: balance});
     }
 
     render() {
 
         return (
             <BrowserRouter>
-                {this.state.isLoading && <Spinner />}
                 <Header />
                 <Content
-                    currentBalance={this.state.userDetails.currentBalance}
+                    currentBalance={this.state.userDetails}
                     selectedStock={this.state.selectedStock}
                     userStock={this.state.userStock}
                     onSelectStock={this.onSelectStock}
                     stocks={this.state.stocks.symbolsList}
                     updateUserDetails={this.updateUserDetails}
                 />
-                <Footer currentBalance={this.state.userDetails.currentBalance}/>
+                <Footer currentBalance={this.state.userDetails}/>
             </BrowserRouter>
         )
     }
