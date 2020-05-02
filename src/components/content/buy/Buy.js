@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import styles from './buy.module.css';
-import {addUsersStock, getAllUsersStocks, updateUserDetails, updateUsersStock} from '../../data/data'
-import {NavLink} from "react-router-dom";
+import { addUsersStock, getAllUsersStocks, updateUserDetails, updateUsersStock } from '../../data/data'
+import { NavLink } from "react-router-dom";
+import Modal from './Modal/Modal'
+// import Chart from './Chart/Chart';
 
 class Buy extends Component {
 
@@ -9,23 +11,24 @@ class Buy extends Component {
         amount: 0,
         stock: {},
         balance: 0,
-        userStocks: []
+        userStocks: [],
+        isModalOpen: false
     }
 
     onIcreaсeClick = () => {
-        this.setState({amount: this.state.amount + 1})
+        this.setState({ amount: this.state.amount + 1 })
     }
 
     onDecreaseClick = () => {
-        if (this.state.amount !== 0){
-            this.setState({amount: this.state.amount - 1})
+        if (this.state.amount !== 0) {
+            this.setState({ amount: this.state.amount - 1 })
         }
     }
 
     buyRequestStock = () => {
-        const {userStocks, stock} = this.state;
+        const { userStocks, stock } = this.state;
         const index = userStocks.findIndex(stock => this.state.stock.symbol === stock.symbol)
-        if (~index){
+        if (~index) {
 
             const updateStock = {
                 ...userStocks[index],
@@ -33,7 +36,7 @@ class Buy extends Component {
                 purchasePrice: userStocks[index].purchasePrice + this.state.amount * stock.price
             };
 
-            const {id, ...stockRest} = updateStock;
+            const { id, ...stockRest } = updateStock;
             updateUsersStock(id, stockRest);
         } else {
             const newStock = {
@@ -47,13 +50,14 @@ class Buy extends Component {
     }
 
     onBuyClick = async () => {
-        let {amount, balance, stock} = this.state;
-        if(amount * stock.price <= balance) {
+        await this.handleModal();
+        let { amount, balance, stock } = this.state;
+        if (amount * stock.price <= balance) {
             this.buyRequestStock();
             balance -= amount * stock.price;
             console.log(balance);
             const userStock = await getAllUsersStocks();
-            this.setState({balance, userStock})
+            this.setState({ balance, userStock })
             updateUserDetails(balance);
         }
         this.props.updateUserDetails();
@@ -62,15 +66,23 @@ class Buy extends Component {
     actualInfo = async () => {
         const userStocks = await getAllUsersStocks();
         const { selectedStock, currentBalance } = this.props;
-        this.setState({stock: selectedStock, balance: currentBalance, userStocks})
+        this.setState({ stock: selectedStock, balance: currentBalance, userStocks })
     }
 
     componentDidMount() {
-       this.actualInfo();
+        this.actualInfo();
+    }
+
+    handleModal = async () => {
+        this.setState(
+            {
+                isModalOpen: !this.state.isModalOpen
+            }
+        )
     }
 
     render() {
-        
+
         let cost = this.state.stock.price ? this.state.stock.price.toString().split('.') : '';
         return (
             <main className={styles.main}>
@@ -85,11 +97,11 @@ class Buy extends Component {
                     <div className={styles.stockName}>Buy {this.state.stock.name}</div>
                     {/* section with stock's price, counter and *Buy* button */}
                     <div className={styles.fake}></div>
-               </section>
+                </section>
                 <section className={styles.middle}>
                     <div className={styles.currentStockPrice}>
-                    {cost[0]}{cost[1] ? '.' : ''}<span
-                        className={styles.priceDecimal}>{cost[1]} {this.state.stock.price ? ' $' : ''}</span>
+                        {cost[0]}{cost[1] ? '.' : ''}<span
+                            className={styles.priceDecimal}>{cost[1]} {this.state.stock.price ? ' $' : ''}</span>
                     </div>
                     <div className={styles.stockBuyCounter}>
                         <button onClick={this.onDecreaseClick} className={styles.minusButton}>
@@ -103,10 +115,19 @@ class Buy extends Component {
                     <div className={styles.totalStocksPrice}>
                         Buy for <span className={styles.span}>{(this.state.stock.price * this.state.amount).toFixed(2)}</span>$
                     </div>
-                    <NavLink to="/stock" className={styles.buyButton} onClick={()=>{
-                        this.onBuyClick()
-                    }}>Buy</NavLink>
+                    <button className={styles.buyButton} onClick={() => {
+                        this.handleModal()
+                    }}>Buy</button>
                 </section>
+                {
+                    this.state.isModalOpen && <Modal    name={this.state.stock.name}
+                                                        amount={this.state.amount}
+                                                        cost={this.state.stock.price}
+                                                        isOpen={this.state.isModalOpen}
+                                                        submit={this.onBuyClick}
+                                                        handleModal={this.handleModal} />
+                }
+                {/* <Chart /> */}
             </main>
         )
     }
