@@ -50,8 +50,6 @@ class StockList extends React.Component {
         </div> :
         <div className = {styles.loading}>
           <CircularProgress />
-          <CircularProgress color="secondary" />
-          <CircularProgress />
         </div>
 
     );
