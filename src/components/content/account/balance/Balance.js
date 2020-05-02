@@ -26,9 +26,10 @@ class Balance extends React.Component {
 
     render() {
         const {percent, difference} = this.calculateTotalChange(this.getTotalPrice(), this.getMarketPrice());
+        let totalPrice = this.getTotalPrice().toFixed(2).split('.');
         return (
             <div className={styles.balance}>
-                <h1>{this.getTotalPrice().toFixed(2)}$</h1>
+                <h1>{totalPrice[0]}{totalPrice[1] ? '.' : ''}<span className={styles.totalDecimal}>{totalPrice[1]} $</span></h1>
                 {this.props.stocks && <p>{difference.toFixed(2)}$({percent.toFixed(2)} %)</p>}
             </div>
         );

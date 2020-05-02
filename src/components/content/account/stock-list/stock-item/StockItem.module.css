@@ -24,6 +24,7 @@ table {
     line-height: 10px;
     width: 69px;
     text-align: center;
+    opacity: .5;
 }
 
 .row .name {
@@ -32,11 +33,15 @@ table {
     font-size: 22px;
     line-height: 18px;
     width: 170px;
+    overflow-x: hidden;
+    background: linear-gradient(90deg, black, black, black, white);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.row .name .transparent {
+/* .row .name .transparent {
     opacity: .5;
-}
+} */
 
 .row .price {
     font-style: normal;

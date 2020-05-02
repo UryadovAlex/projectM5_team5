@@ -2,7 +2,7 @@ import React from "react";
 import {Route} from "react-router-dom";
 import Account from "./account/Account";
 import styles from './Content.module.css';
-import Stock from './stock/Stock.jsx';
+import Stock from './stock/Stock';
 import Buy from './buy/Buy'
 
 

@@ -22,7 +22,7 @@ class StockItem extends React.Component {
                 </td>
                 <td className={style.symbol}>{amount} pcs</td>
                 <td className={style.price}>
-                    {price[0]}{price[1] ? '.' : ''}<span className={style.decimal}>{price[1]}</span> $
+                    {price[0]}{price[1] ? '.' : ''}<span className={style.decimal}>{price[1]} $</span>
                 </td>
                 <td className={style.change}>100%</td>
             </tr>
