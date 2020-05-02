@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b8349ec-68d7-401d-b15f-5e43a8452489" name="Default Changelist" comment="">
+    <list default="true" id="7b8349ec-68d7-401d-b15f-5e43a8452489" name="Default Changelist" comment="Merge branch 'master' of https://github.com/UryadovAlex/projectM5_team5&#10;&#10;# Conflicts:&#10;#&#9;src/components/content/Content.js&#10;#&#9;yarn.lock">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/Content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/Content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/Content.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/account/stock-list/stock-item/StockItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/account/stock-list/stock-item/StockItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/buy/Buy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/buy/Buy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/buy/buy.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/buy/buy.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/stock/Stock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/stock/Stock.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/stock/stock-list/StockList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/stock/stock-list/StockList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/stock/stock-list/stock-item/StockItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/stock/stock-list/stock-item/StockItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/data/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +35,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1bFfCGmInvHnatH9EyeOX6A90H5" />
@@ -40,7 +57,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebstormProjects/react-day2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -58,6 +75,7 @@
       <updated>1588232632287</updated>
       <workItem from="1588232637768" duration="26223000" />
       <workItem from="1588262917128" duration="21032000" />
+      <workItem from="1588447214252" duration="313000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/UryadovAlex/projectM5_team5&#10;&#10;# Conflicts:&#10;#&#9;src/components/content/Content.js&#10;#&#9;yarn.lock">
       <created>1588263562265</created>
@@ -66,11 +84,21 @@
       <option name="project" value="LOCAL" />
       <updated>1588263562265</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Merge branch 'master' of https://github.com/UryadovAlex/projectM5_team5&#10;&#10;# Conflicts:&#10;#&#9;src/components/content/Content.js&#10;#&#9;yarn.lock">
+      <created>1588447408687</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588447408687</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
