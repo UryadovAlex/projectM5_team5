@@ -34,7 +34,7 @@
     background-clip: text;
 }
 
-/* .row .name .transparent {
+.row .name .transparent {
     opacity: .5;
 }
 .row .price {
@@ -67,5 +67,4 @@
     color: #2FC20A;
 }
 
-*/
 
