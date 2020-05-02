@@ -3,7 +3,7 @@ import styles from './buy.module.css';
 import { addUsersStock, getAllUsersStocks, updateUserDetails, updateUsersStock } from '../../data/data'
 import { NavLink } from "react-router-dom";
 import Modal from './Modal/Modal'
-// import Chart from './Chart/Chart';
+import Chart from './Chart/Chart';
 
 class Buy extends Component {
 
@@ -82,57 +82,51 @@ class Buy extends Component {
     }
 
     render() {
-
         let cost = this.state.stock.price ? this.state.stock.price.toString().split('.') : '';
         return (
             <main className={styles.main}>
                 {/* section with *Back* button and picked stock  */}
-                {cost && <div>
-                    <section className={styles.header}>
-                        <NavLink to="/stock" className={styles.button}>
-                            <svg className="bi bi-chevron-left" width="1.6em" height="18px" viewBox="0 0 16 16"
-                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fillRule="evenodd"
-                                    d="M11.354 1.646a.5.5 0 010 .708L5.707 8l5.647 5.646a.5.5 0 01-.708.708l-6-6a.5.5 0 010-.708l6-6a.5.5 0 01.708 0z"
-                                    clipRule="evenodd" />
-                            </svg>
-                            <span>Back</span>
-                        </NavLink>
-                        <div className={styles.stockName}>Buy {this.state.stock.name}</div>
-                        {/* section with stock's price, counter and *Buy* button */}
-                        <div className={styles.fake}></div>
-                    </section>
-                    <section className={styles.middle}>
-                        <div className={styles.currentStockPrice}>
-                            {cost[0]}{cost[1] ? '.' : ''}<span
-                                className={styles.priceDecimal}>{cost[1]} {this.state.stock.price ? ' $' : ''}</span>
-                        </div>
-                        <div className={styles.stockBuyCounter}>
-                            <button onClick={this.onDecreaseClick} className={styles.minusButton}>
-                                -
-                            </button>
-                            <p className={styles.stocksCount}>{this.state.amount}</p>
-                            <button onClick={this.onIncreaseClick} className={styles.plusButton}>
-                                +
-                            </button>
-                        </div>
-                        <div className={styles.totalStocksPrice}>
-                            Buy for <span
-                                className={styles.span}>{(this.state.stock.price * this.state.amount).toFixed(2)}</span>$
-                        </div>
-                        <button className={styles.buyButton} onClick={() => {
-                            this.handleModal()
-                        }}>Buy</button>
-                    </section>
-                    {
-                        this.state.isModalOpen && <Modal name={this.state.stock.name}
-                            amount={this.state.amount}
-                            cost={this.state.stock.price}
-                            isOpen={this.state.isModalOpen}
-                            submit={this.onBuyClick}
-                            handleModal={this.handleModal} />
-                    }
-                </div>}
+                <section className={styles.header}>
+                    <NavLink to="/stock" className={styles.button}>
+                        <svg className="bi bi-chevron-left" width="1.6em" height="18px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fillRule="evenodd" d="M11.354 1.646a.5.5 0 010 .708L5.707 8l5.647 5.646a.5.5 0 01-.708.708l-6-6a.5.5 0 010-.708l6-6a.5.5 0 01.708 0z" clipRule="evenodd" />
+                        </svg>
+                        <span>Back</span>
+                    </NavLink>
+                    <div className={styles.stockName}>Buy {this.state.stock.name}</div>
+                    {/* section with stock's price, counter and *Buy* button */}
+                    <div className={styles.fake}></div>
+                </section>
+                <Chart symbol={this.props.selectedStock.symbol}/>
+                <section className={styles.middle}>
+                    <div className={styles.currentStockPrice}>
+                        {cost[0]}{cost[1] ? '.' : ''}<span
+                            className={styles.priceDecimal}>{cost[1]} {this.state.stock.price ? ' $' : ''}</span>
+                    </div>
+                    <div className={styles.stockBuyCounter}>
+                        <button onClick={this.onDecreaseClick} className={styles.minusButton}>
+                            -
+                        </button>
+                        <p className={styles.stocksCount}>{this.state.amount}</p>
+                        <button onClick={this.onIncreaseClick} className={styles.plusButton}>
+                            +
+                        </button>
+                    </div>
+                    <div className={styles.totalStocksPrice}>
+                        Buy for <span className={styles.span}>{(this.state.stock.price * this.state.amount).toFixed(2)}</span>$
+                    </div>
+                    <button className={styles.buyButton} onClick={() => {
+                        this.handleModal()
+                    }}>Buy</button>
+                </section>
+                {
+                    this.state.isModalOpen && <Modal    name={this.state.stock.name}
+                                                        amount={this.state.amount}
+                                                        cost={this.state.stock.price}
+                                                        isOpen={this.state.isModalOpen}
+                                                        submit={this.onBuyClick}
+                                                        handleModal={this.handleModal} />
+                }
             </main>
         )
     }
