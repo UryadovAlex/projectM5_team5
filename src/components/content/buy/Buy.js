@@ -3,7 +3,7 @@ import styles from './buy.module.css';
 import { addUsersStock, getAllUsersStocks, updateUserDetails, updateUsersStock } from '../../data/data'
 import { NavLink } from "react-router-dom";
 import Modal from './Modal/Modal'
-// import Chart from './Chart/Chart';
+import Chart from './Chart/Chart';
 
 class Buy extends Component {
 
@@ -82,7 +82,6 @@ class Buy extends Component {
     }
 
     render() {
-
         let cost = this.state.stock.price ? this.state.stock.price.toString().split('.') : '';
         return (
             <main className={styles.main}>
@@ -98,6 +97,7 @@ class Buy extends Component {
                     {/* section with stock's price, counter and *Buy* button */}
                     <div className={styles.fake}></div>
                 </section>
+                <Chart symbol={this.props.selectedStock.symbol}/>
                 <section className={styles.middle}>
                     <div className={styles.currentStockPrice}>
                         {cost[0]}{cost[1] ? '.' : ''}<span
@@ -127,7 +127,6 @@ class Buy extends Component {
                                                         submit={this.onBuyClick}
                                                         handleModal={this.handleModal} />
                 }
-                {/* <Chart /> */}
             </main>
         )
     }
