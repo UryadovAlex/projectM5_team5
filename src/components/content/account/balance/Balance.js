@@ -32,13 +32,16 @@ class Balance extends React.Component {
         const plus = difference > 0 ? '+' : '';
         const sign = difference > 0 ? inc : difference < 0 ? dec : '';
         const color = difference > 0 ? styles.green : difference < 0 ? styles.red : '';
+        const balance = this.getTotalPrice() ? this.getTotalPrice().toFixed(2).split('.') : '';
+        const integerBalance = balance[0] % 1000;
+        const thousands = Math.floor(balance[0] / 1000);
         return (
             <div className={styles.balance}>
 
                 {
                     this.props.stocks &&
                     <div>
-                        <h1>{plus}{this.getTotalPrice().toFixed(2)}$</h1>
+                        <h1>{plus}{thousands} {integerBalance}{balance[1] ? '.' : ''}<span className={styles.totalDecimal}>{balance[1]}$</span></h1>
                         <p className={color}>
                             {difference !== 0 && <img src={sign} alt="sign"/>}
                             {difference.toFixed(2)}$({percent.toFixed(2)} %)
