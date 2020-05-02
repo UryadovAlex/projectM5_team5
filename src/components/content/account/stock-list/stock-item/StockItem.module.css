@@ -3,7 +3,6 @@ table {
     justify-content: center;
     border-collapse: collapse;
     margin:0 auto;
-    margin-top:40px;
     flex-direction: column;
     overflow-y: scroll;
     height:292px;
@@ -65,5 +64,13 @@ table {
     font-size: 15px;
     width: 20%;
     text-align: center;
-
 }
+
+.red {
+    color: #FF2C2C;
+}
+
+.green {
+    color: #2FC20A;
+}
+

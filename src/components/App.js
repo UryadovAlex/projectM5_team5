@@ -12,7 +12,7 @@ export default class App extends Component {
     state = {
         stocks : {},
         userStock: [],
-        userDetails: {},
+        userDetails: 0,
         selectedStock: {}
     }
 
@@ -23,27 +23,22 @@ export default class App extends Component {
 
     async componentDidMount() {
         try {
-            const userDetails = await getUserDetails();
-            const stocks = await getAllStocks();
-            const userStock = await getAllUsersStocks();
+            Promise.all([getUserDetails(), getAllStocks(), getAllUsersStocks()])
+                .then(data => {
+                    this.setState({userDetails: data[0].currentBalance, stocks: data[1], userStock: data[2]})
+                })
             // // //updateUserDetails(100000);
             // userStock.forEach((stock) => {
             //     deleteUsersStock(stock.id);
             // })
-            this.setState({userDetails, stocks, userStock})
+
         } catch (e) {
             console.log(e);
         }
     }
 
-    updateUserDetails = async () =>{
-        try {
-            const userDetails = await getUserDetails();
-            this.setState({userDetails})
-        } catch (e) {
-            console.log(e);
-        }
-
+    updateUserDetails = balance =>{
+       this.setState({userDetails: balance});
     }
 
     render() {
@@ -52,14 +47,14 @@ export default class App extends Component {
             <BrowserRouter>
                 <Header />
                 <Content
-                    currentBalance={this.state.userDetails.currentBalance}
+                    currentBalance={this.state.userDetails}
                     selectedStock={this.state.selectedStock}
                     userStock={this.state.userStock}
                     onSelectStock={this.onSelectStock}
                     stocks={this.state.stocks.symbolsList}
                     updateUserDetails={this.updateUserDetails}
                 />
-                <Footer currentBalance={this.state.userDetails.currentBalance}/>
+                <Footer currentBalance={this.state.userDetails}/>
             </BrowserRouter>
         )
     }

@@ -2,7 +2,7 @@ import React from 'react';
 import StockItem from './stock-item/StockItem';
 import styles from './StockList.module.css';
 import { Pagination } from '@material-ui/lab';
-import { getAllStocks } from '../../../data/data'
+import {NavLink} from "react-router-dom";
 
 class StockList extends React.Component {
 
@@ -27,6 +27,7 @@ class StockList extends React.Component {
     return (
       <div className={styles.main}>
         <div className={styles.wrapper}>
+          <NavLink to="/buy" className = {styles.link}>
           <table className={styles.table}>
             <tbody>
               {
@@ -38,6 +39,7 @@ class StockList extends React.Component {
               }
             </tbody>
           </table>
+          </NavLink>
         </div>
         {this.props.stocks && <Pagination
             className={styles.page}

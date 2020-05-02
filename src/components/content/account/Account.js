@@ -8,7 +8,7 @@ class Account extends React.Component{
         return (
             <div>
                 <Balance userStock={userStock} stocks={stocks}/>
-                <StockList userStock={userStock}/>
+                <StockList userStock={userStock} stocks={stocks}/>
             </div>
         );
     }

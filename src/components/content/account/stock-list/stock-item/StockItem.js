@@ -1,5 +1,7 @@
 import React from "react";
 import style from './StockItem.module.css';
+import inc from '../../img/inc.png';
+import dec from '../../img/dec.png';
 
 class StockItem extends React.Component {
 
@@ -11,8 +13,14 @@ class StockItem extends React.Component {
 
 
     render() {
-        let {symbol, amount, purchasePrice, name} = this.props;
-        let price = purchasePrice.toFixed(2).toString().split('.');
+
+        let {symbol, amount, purchasePrice, name, priceInMarket, price} = this.props;
+        purchasePrice = purchasePrice.toFixed(2).toString().split('.');
+        const [profit, percent] = this.calculateProfit(price, priceInMarket)
+        const plus = profit > 0 ? '+' : '';
+        const sign = profit > 0 ? inc : profit < 0 ? dec : '';
+        const color = [style.change, profit > 0 ? style.green : profit < 0 ? style.red : ''].join(' ')
+
         return (
             <tr className={style.row}>
                 <td className={style.symbol}>{symbol}</td>
@@ -22,9 +30,13 @@ class StockItem extends React.Component {
                 </td>
                 <td className={style.symbol}>{amount} pcs</td>
                 <td className={style.price}>
-                    {price[0]}{price[1] ? '.' : ''}<span className={style.decimal}>{price[1]}</span> $
+                    {purchasePrice[0]}{purchasePrice[1] ? '.' : ''}
+                    <span className={style.decimal}>{purchasePrice[1]}</span> $
                 </td>
-                <td className={style.change}>100%</td>
+                <td className={color}>
+                    <img src={sign} alt="sign"/>
+                    {plus}{(profit * amount).toFixed(2)}$({plus}{percent}%)
+                </td>
             </tr>
         );
     }
