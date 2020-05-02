@@ -30,7 +30,7 @@ class StockList extends React.Component {
     return (
       <div className={styles.main}>
         {
-          this.props.stock ?
+          !this.props.stock ?
             <div className={styles.table}>
               <NavLink to="/buy" className={styles.link}>
                 <table>
