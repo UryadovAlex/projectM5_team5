@@ -10,11 +10,12 @@
     border: none;
     text-align: center;
     color: #833AE0;
-    font-size: 35px;
+    font-size: 30px;
     line-height: 24px;
     outline-style: inherit;
     margin-bottom: 13px;
-    margin-top: 26px;
+    margin-top:-8%;
+   
   }
   
   .searchBar::placeholder {
@@ -26,6 +27,6 @@
   
   .icon {
     position: absolute;
-    top: 53px;
     left: 19px;
+    top:-5px;
   }

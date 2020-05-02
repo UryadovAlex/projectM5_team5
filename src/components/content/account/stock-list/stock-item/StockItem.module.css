@@ -1,10 +1,18 @@
 table {
+    display: flex;
+    justify-content: center;
     border-collapse: collapse;
+    margin:0 auto;
+    margin-top:40px;
+    flex-direction: column;
+    overflow-y: scroll;
+    height:292px;
+    margin-top:0px;
 }
 
 .row {
     font-family: 'Roboto', sans-serif;
-    width: 759px;
+    border-bottom: 1px dashed #E0E0E0;
     height: 84px;
 }
 
@@ -17,45 +25,45 @@ table {
 }
 
 .row .symbol {
-    font-family: Space Mono;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 10px;
     width: 69px;
-    text-align: center;
+    text-align: left;
+    padding-left:10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .row .name {
     font-style: normal;
     font-weight: normal;
-    font-size: 22px;
-    line-height: 18px;
+    font-size:18px;
     width: 170px;
 }
 
 .row .name .transparent {
     opacity: .5;
 }
-
 .row .price {
     font-style: normal;
     font-weight: normal;
     font-size: 22px;
     line-height: 18px;
-    width: 190px;
-    text-align: center;
+    width: 140px;
+    text-align: end;
+  
 }
 
 .row .price .decimal {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .row .change {
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 10px;
-    width: 270px;
+    font-size: 15px;
+    width: 20%;
     text-align: center;
+
 }
