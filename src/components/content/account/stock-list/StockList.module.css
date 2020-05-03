@@ -41,3 +41,8 @@
 /* .table table::-webkit-scrollbar {
     display: none;
 } */
+
+.tbody{
+
+    height:292px;
+}

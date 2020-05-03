@@ -11,6 +11,10 @@
   font-family: Roboto ;
 }
 
+.tbody{
+  height:292px;
+}
+
 
 /* .table table::-webkit-scrollbar {
   display: none;

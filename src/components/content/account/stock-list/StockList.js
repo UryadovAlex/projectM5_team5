@@ -28,7 +28,7 @@ class StockList extends React.Component {
         return (
             <div className={styles.table}>
                 <table>
-                    <tbody>
+                    <tbody className={styles.tbody}>
                     {this.getStockList().slice(pageSize * (currentPage - 1), pageSize * currentPage)}
                     </tbody>
                 </table>

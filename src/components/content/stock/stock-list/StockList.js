@@ -32,8 +32,8 @@ class StockList extends React.Component {
           !this.props.stock ?
             <div className={styles.table}>
               <NavLink to="/buy" className={styles.link}>
-                <table>
-                  <tbody>
+                <table class={styles.tbody} >
+                  <tbody class={styles.tbody}>
                     {
                       arr.slice(pageSize * (currentPage - 1), pageSize * currentPage)
                         .map(item => <StockItem

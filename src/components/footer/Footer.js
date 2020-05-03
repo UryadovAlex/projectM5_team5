@@ -16,7 +16,7 @@ export default class Footer extends Component {
                         <span className={cents}>{currentBalance[1]} {currentBalance ? '$' : ''}</span>
                         
                     </div>
-                    <div className={fake}></div>
+                    <div className={fake}>Team5 - [Ahmed, Alexandr, Elnar, Muhammad]</div>
                 </div>
             </footer>
         )
