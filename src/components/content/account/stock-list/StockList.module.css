@@ -1,8 +1,22 @@
 .table table{
+    display:flex;
+    margin-bottom:35px;
+    align-items: center;
     justify-content: center;
     border-collapse: collapse;
     margin:0 auto;
     flex-direction: column;
     overflow-y: scroll;
     height:292px;
+    margin:0 auto;
+    font-family: Roboto;
 }
+.table{
+    margin-top:5px;
+
+ }
+
+
+/* .table table::-webkit-scrollbar {
+    display: none;
+} */
