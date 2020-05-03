@@ -6,6 +6,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import styles from './Modal.module.css'
+import { NavLink } from "react-router-dom";
 
 export default class Modal extends Component {
     render() {
@@ -28,8 +29,8 @@ export default class Modal extends Component {
                     <Button color="primary" onClick = {this.props.handleModal}>
                         Cancel
                 </Button>
-                    <Button color="primary" autoFocus onClick = {this.props.submit}>
-                        Buy
+                    <Button color="primary" autoFocus className={styles.navlink} onClick = {this.props.submit}>
+                        <NavLink to="/account">Buy</NavLink>
                 </Button>
                 </DialogActions>
             </Dialog> :null

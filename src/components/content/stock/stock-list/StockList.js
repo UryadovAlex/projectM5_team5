@@ -26,7 +26,6 @@ class StockList extends React.Component {
     let arr = this.props.stocks ? this.props.stocks.filter(item => this.searchName(this.props.inputValue, item.symbol)) : [];
 
     const { pageSize, currentPage } = this.state
-    console.log(Math.ceil(arr.length / pageSize))
     return (
       <div className={styles.main}>
         {

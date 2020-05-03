@@ -1,5 +1,5 @@
 import React from "react";
-import {Route} from "react-router-dom";
+import {BrowserRouter, Route} from "react-router-dom";
 import Account from "./account/Account";
 import styles from './Content.module.css';
 import Stock from './stock/Stock';
@@ -11,8 +11,10 @@ class Content extends React.Component {
         const {userStock} = this.props;
         return (
             <div className={styles.wrapper}>
-                <Route exact path='/account' render={() => <Account userStock={userStock} stocks={this.props.stocks}/>}/>
-                <Route exact path='/' render={() => <Account userStock={userStock} stocks={this.props.stocks}/>}/>
+                <Route exact path='/account'
+                       render={() => <Account userStock={userStock} stocks={this.props.stocks}/>}/>
+                <Route exact path='/'
+                       render={() => <Account userStock={userStock} stocks={this.props.stocks}/>}/>
                 <Route path='/stock' render={() => <Stock
                     onSelectStock={this.props.onSelectStock} stocks={this.props.stocks}/>}/>
                 <Route path='/buy' render={() => <Buy
@@ -22,6 +24,7 @@ class Content extends React.Component {
                     updateUserStocks={this.props.updateUserStocks}
                     updateUserDetails={this.props.updateUserDetails}/>}/>
             </div>
+
         );
     }
 }

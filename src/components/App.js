@@ -41,8 +41,8 @@ export default class App extends Component {
        this.setState({userDetails: balance});
     }
 
-    updateUserStocks = () => {
-        getAllUsersStocks().then(data => this.setState({userStock: data}))
+    updateUserStocks = userStock => {
+        this.setState({userStock : userStock})
     }
 
     render() {

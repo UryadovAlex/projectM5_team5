@@ -4,9 +4,7 @@
     height: 84px;
 }
 
-.row:hover {
-    background: rgba(131, 58, 224, 0.05);
-}
+
 
 .row td {
     border-bottom: 1px black;

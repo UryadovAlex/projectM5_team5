@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './buy.module.css';
-import { addUsersStock, getAllUsersStocks, updateUserDetails, updateUsersStock } from '../../data/data'
+import { addUsersStock, updateUserDetails, updateUsersStock } from '../../data/data'
 import { NavLink } from "react-router-dom";
 import Modal from './Modal/Modal'
 import Chart from './Chart/Chart';
@@ -8,7 +8,7 @@ import Chart from './Chart/Chart';
 class Buy extends Component {
 
     state = {
-        amount: 0,
+        amount: 1,
         stock: {},
         balance: 0,
         userStocks: [],
@@ -20,7 +20,7 @@ class Buy extends Component {
     }
 
     onDecreaseClick = () => {
-        if (this.state.amount !== 0) {
+        if (this.state.amount !== 1) {
             this.setState({ amount: this.state.amount - 1 })
         }
     }
@@ -35,7 +35,8 @@ class Buy extends Component {
                 amount: userStocks[index].amount + this.state.amount,
                 purchasePrice: userStocks[index].purchasePrice + this.state.amount * stock.price
             };
-
+            const updatedUserStocks = userStocks.filter(stock => stock.symbol !== updateStock.symbol)
+            this.props.updateUserStocks([...updatedUserStocks, updateStock]);
             const { id, ...stockRest } = updateStock;
             updateUsersStock(id, stockRest);
         } else {
@@ -45,6 +46,7 @@ class Buy extends Component {
                 purchasePrice: this.state.amount * stock.price,
                 userId: 5
             }
+            this.props.updateUserStocks([...userStocks, newStock]);
             addUsersStock(newStock);
         }
     }
@@ -56,7 +58,6 @@ class Buy extends Component {
         if (totalPrice <= balance && totalPrice !== 0) {
             this.buyRequestStock();
             balance -= amount * stock.price;
-            this.props.updateUserStocks();
             this.setState({ balance, userStock: this.props.userStock, amount: 0 })
             updateUserDetails(balance);
         }
@@ -64,9 +65,8 @@ class Buy extends Component {
     }
 
     actualInfo = () => {
-        const userStocks = this.props.userStock;
-        const { selectedStock, currentBalance } = this.props;
-        this.setState({ stock: selectedStock, balance: currentBalance, userStocks })
+        const { selectedStock, currentBalance, userStock } = this.props;
+        this.setState({ stock: selectedStock, balance: currentBalance, userStocks: userStock })
     }
 
     componentDidMount() {

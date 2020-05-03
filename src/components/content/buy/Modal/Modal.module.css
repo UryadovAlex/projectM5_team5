@@ -2,3 +2,7 @@
     font-weight: 800;
     color:black;
 }
+
+.navlink a{
+    text-decoration: none;
+}
