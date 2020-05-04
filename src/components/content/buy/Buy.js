@@ -58,7 +58,7 @@ class Buy extends Component {
         if (totalPrice <= balance && totalPrice !== 0) {
             this.buyRequestStock();
             balance -= amount * stock.price;
-            this.setState({ balance, userStock: this.props.userStock, amount: 0 })
+            //this.setState({ balance, userStock: this.props.userStock, amount: 0 })
             updateUserDetails(balance);
         }
         this.props.updateUserDetails(balance);

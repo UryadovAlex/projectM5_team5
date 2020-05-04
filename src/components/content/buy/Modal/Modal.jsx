@@ -10,7 +10,6 @@ import { NavLink } from "react-router-dom";
 
 export default class Modal extends Component {
     render() {
-        console.log(this.props);
         return (
             this.props.name !== undefined ?
             <Dialog

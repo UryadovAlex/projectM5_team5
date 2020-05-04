@@ -2,6 +2,7 @@ import React from "react";
 import StockItem from "./stock-item/StockItem";
 import {Pagination} from '@material-ui/lab';
 import styles from './StockList.module.css';
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 class StockList extends React.Component {
 
@@ -25,24 +26,29 @@ class StockList extends React.Component {
 
     render() {
         const {pageSize, currentPage} = this.state
+        let list = this.getStockList();
         return (
-            <div className={styles.table}>
-                <table>
-                    <tbody className={styles.tbody}>
-                    {this.getStockList().slice(pageSize * (currentPage - 1), pageSize * currentPage)}
-                    </tbody>
-                </table>
-                {
-                    this.props.userStock.length > 20 &&
-                    <div className={styles.paging}>
-                        <Pagination
-                        count={Math.ceil(this.props.userStock.length / this.state.pageSize)}
-                        color="primary"
-                        onChange={this.handlePageChange}
-                        />
-                    </div>
-                }
+
+            <div>
+                {list.length ? <div className={styles.table}>
+                    {<table>
+                        <tbody className={styles.tbody}>
+                        {list.slice(pageSize * (currentPage - 1), pageSize * currentPage)}
+                        </tbody>
+                    </table>}
+                    {
+                        this.props.userStock.length > 20 &&
+                        <div className={styles.paging}>
+                            <Pagination
+                                count={Math.ceil(this.props.userStock.length / this.state.pageSize)}
+                                color="primary"
+                                onChange={this.handlePageChange}
+                            />
+                        </div>
+                    }
+                </div> : <CircularProgress />}
             </div>
+
         );
     }
 }

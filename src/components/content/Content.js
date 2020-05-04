@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter, Route} from "react-router-dom";
+import { Route } from "react-router-dom";
 import Account from "./account/Account";
 import styles from './Content.module.css';
 import Stock from './stock/Stock';
@@ -11,7 +11,7 @@ class Content extends React.Component {
         const {userStock} = this.props;
         return (
             <div className={styles.wrapper}>
-                <Route exact path='/account'
+                <Route path='/account'
                        render={() => <Account userStock={userStock} stocks={this.props.stocks}/>}/>
                 <Route exact path='/'
                        render={() => <Account userStock={userStock} stocks={this.props.stocks}/>}/>

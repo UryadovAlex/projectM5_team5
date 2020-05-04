@@ -21,6 +21,8 @@
 } */
 
 .main{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items:center;   
 } 
@@ -28,7 +30,7 @@
 
 .page{
   margin:0 auto;
-  width:65%;
+  /*width:65%;*/
 }
  
 .table {

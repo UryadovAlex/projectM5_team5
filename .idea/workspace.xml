@@ -27,19 +27,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7b8349ec-68d7-401d-b15f-5e43a8452489" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/Content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/account/balance/Balance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/account/balance/Balance.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/account/stock-list/StockList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/account/stock-list/StockList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/account/stock-list/StockList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/account/stock-list/StockList.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/account/stock-list/stock-item/StockItem.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/account/stock-list/stock-item/StockItem.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/buy/Buy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/buy/Buy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/buy/Modal/Modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/buy/Modal/Modal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/buy/Modal/Modal.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/buy/Modal/Modal.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/buy/buy.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/buy/buy.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/stock/stock-list/StockList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/stock/stock-list/StockList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/stock/stock-list/StockList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/stock/stock-list/StockList.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/stock/stock-list/stock-item/StockItem.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/stock/stock-list/stock-item/StockItem.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +85,8 @@
       <workItem from="1588448422906" duration="89000" />
       <workItem from="1588503016444" duration="5733000" />
       <workItem from="1588515200774" duration="2901000" />
-      <workItem from="1588518406074" duration="2016000" />
+      <workItem from="1588518406074" duration="6622000" />
+      <workItem from="1588568103761" duration="8750000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/UryadovAlex/projectM5_team5&#10;&#10;# Conflicts:&#10;#&#9;src/components/content/Content.js&#10;#&#9;yarn.lock">
       <created>1588263562265</created>
@@ -143,10 +137,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="295" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588448190915" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1588268885588">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1588527907221">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588268885588" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588527907221" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1588263022153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

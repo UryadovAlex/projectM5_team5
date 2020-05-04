@@ -29,20 +29,20 @@ class StockList extends React.Component {
     return (
       <div className={styles.main}>
         {
-          !this.props.stock ?
+          this.props.stocks ?
             <div className={styles.table}>
               <NavLink to="/buy" className={styles.link}>
-                <table class={styles.tbody} >
-                  <tbody class={styles.tbody}>
-                    {
-                      arr.slice(pageSize * (currentPage - 1), pageSize * currentPage)
+                {arr.length ? <table className={styles.tbody}>
+                  <tbody className={styles.tbody}>
+                  {
+                    arr.slice(pageSize * (currentPage - 1), pageSize * currentPage)
                         .map(item => <StockItem
-                          onSelectStock={this.props.onSelectStock}
-                          stock={item}
-                          key={item.symbol} />)
-                    }
+                            onSelectStock={this.props.onSelectStock}
+                            stock={item}
+                            key={item.symbol}/>)
+                  }
                   </tbody>
-                </table>
+                </table> : ''}
               </NavLink>
             </div> :
             <div className={styles.loading}>
@@ -50,12 +50,12 @@ class StockList extends React.Component {
             </div>
         }
         {
-          this.props.stocks &&
+          arr.length ?
           <Pagination
             className={styles.page}
             count={Math.ceil(arr.length / pageSize)}
             color="primary"
-            onChange={this.handlePageChange} />
+            onChange={this.handlePageChange} /> : ''
         }
       </div>
     );
