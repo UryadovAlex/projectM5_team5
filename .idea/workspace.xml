@@ -26,7 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b8349ec-68d7-401d-b15f-5e43a8452489" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +64,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\New folder\projectM5_team5" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -81,7 +86,7 @@
       <workItem from="1588503016444" duration="5733000" />
       <workItem from="1588515200774" duration="2901000" />
       <workItem from="1588518406074" duration="6622000" />
-      <workItem from="1588568103761" duration="10178000" />
+      <workItem from="1588568103761" duration="12350000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/UryadovAlex/projectM5_team5&#10;&#10;# Conflicts:&#10;#&#9;src/components/content/Content.js&#10;#&#9;yarn.lock">
       <created>1588263562265</created>
