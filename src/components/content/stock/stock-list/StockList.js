@@ -42,7 +42,7 @@ class StockList extends React.Component {
                             key={item.symbol}/>)
                   }
                   </tbody>
-                </table> : <p>Not found</p>}
+                </table> : <p className={styles.notfound}>Not found</p>}
               </NavLink>
             </div> :
             <div className={styles.loading}>
